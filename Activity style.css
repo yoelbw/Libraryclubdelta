@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+.activity{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/activity.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.activity h1{
+    margin-top: 10%;
+    text-align: center;
+    font-size: 40;
+    font-weight: 400;
+}
+.people i:nth-child(1){
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    font-size: 50px;
+    text-align: center;
+}S
