@@ -1,0 +1,189 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Library club</title>
+    <link rel = "icon" href="Photo/LC%20(2).png" type="image/x-icon">
+    <link rel="stylesheet" href="LC%20style.css">
+    <script src="https://kit.fontawesome.com/1024277203.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="LC">
+    <img src="Photo/LC%20(2).png">
+    <h1>LIBRARY CLUB</h1>
+</section>
+
+<!-------------------- Opening -------------------->    
+<section class="about-us">
+    <h1>Tentang Kami</h1>
+    
+    <div class="row">
+        <div class="about-col">
+            <h1>We are the only one library in school</h1>
+            <p>
+
+Library Club SMAN 8 Kota Tangerang Selatan adalah bagian penting dalam mencapai tujuan untuk menjadi sekolah yang unggul dalam masalah pendidikan dan pengetahuan.
+<br>
+Kami yakin bahwa Perpustakaan adalah sebuah sarana yang penting untuk memastikan kebutuhan belajar siswa benar-benar terpenuhi.
+<br>
+Kami ingin mengimbau kepada semua siswa dan masyarakat sekitar SMAN 8 Kota Tangerang Selatan bahwa perpustakaan ini bukan hanya sebuah tempat untuk menyimpan buku-buku saja, melainkan juga menjadi tempat rujukan yang memudahkan siswa dalam melakukan penelitian dan mengembangkan pemikiran-pemikiran positif.
+<br>
+Kami yakin bahwa Perpustakaan SMAN 8 Kota Tangerang Selatan masih terus menjadi tempat belajar yang memikat hati siswa-siswa kami untuk berpikir dan berinovasi dalam menciptakan ide-ide cemerlang.
+</p>
+        </div>
+
+<!------------ slideshow -------------->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="Photo/LC%20WA/LC%201.png" style="max-width:100%">
+  <div class="text">Break after pemilihan buku</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="Photo/LC%20WA/LC%202.png" style="max-width:100%">
+  <div class="text">Acara Demo Ekskul</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="Photo/LC%20WA/LC%203.png" style="max-width:100%">
+  <div class="text">Angakatan 24/25/26</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="Photo/LC%20WA/LC%204.png" style="max-width:100%">
+  <div class="text">Bukber LC</div>
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="Photo/LC%20WA/LC%205.png" style="max-width:100%">
+  <div class="text">Literasi</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    </div>
+</section>
+
+<!--------------- visi & misi ------------------
+<div>
+    <div class="book">
+        <p>Hello</p>
+    <div class="cover">
+        <p>Hover Me</p>
+    </div>
+   </div>
+</div>
+    
+<!-------------------- photo -------------------->
+<section class="activitylc">
+    <h1>AKTIVITAS KAMI</h1>
+    <p>Beberapa Dokumentasi dari aktivitas kami </p>
+    
+    <div class="row">
+        <div class="activity-photo">
+            <a href="">
+                <img src="Photo/info.jpg">
+            </a>
+            <h3>Penomoran buku</h3>
+            <p>Kami menyediakan tempat untuk membaca buku yang bagus</p>
+        </div>
+        <div class="activity-photo">
+            <a href="">
+                <img src="Photo/LC%20WA/pembagian.png">
+            </a>
+            <h3>Pengecapan buku</h3>
+            <p>Kami menyediakan tempat untuk membaca buku yang bagus</p>
+        </div>
+        <div class="activity-photo">
+            <a href="">
+                <img src="Photo/LC WA/pembagian 1.png">
+            </a>
+            <h3>Pembagian buku</h3>
+            <p>Kami menyediakan tempat untuk membaca buku yang bagus</p>
+        </div>
+    </div>
+</section>
+
+<!-------------------- shcedule -------------------->    
+<section class="jadwal">
+    <h1>JADWAL</h1>
+</section>
+    
+
+<!----------- Footer ----------->
+<section class="footer">
+    <h4>About us</h4>
+    <p>OPERATION TIME</p>
+    <p>Senin-Jumat 08.00 - 16.00 WIB<br>Sabtu-Minggu 09.00 - 15.30 WIB<br>Cuti Bersama dan Libur Nasional Tutup</p><br>
+    <p>CONTACT<br>Natalie(+62 812-9474-5420)</p>
+    <br>
+    <div class="icons">
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+    <br>
+    <p>@copyright 2023 Made by personel of LC</p>
+</section>
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+</body>
+</html>
