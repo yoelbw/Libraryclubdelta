@@ -10,9 +10,220 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+<!----------------------------------------- load -------------------------------------------------->
+<div class="loader">
+    <div class="wave-container">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <div class="loading-indicator">
+      <img src="" alt="Loading">
+      <p class="loading-text"></p>
+    </div>
+</div>
+<!----------------------------------------- load -------------------------------------------------->
+ 
 <section class="info">
     <img src="Photo/Info.png">
     <h1>INFORMASI</h1>
 </section>
+    
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="Photo/LC%20(2).png">
+        <h1>Berita Buku</h1>
+      </div>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Terbaru</a></li>
+        <li><a href="#">Buku</a></li>
+        <li><a href="#">Lebih lanjut</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Selamat Datang di Informasi Buku</h2>
+      <p>Temukan berita terbaru tentang Buku dan Library Club.</p>
+    </section>
+
+    <section class="news">
+      <h2>Info Terbaru</h2>
+      <div class="news-container">
+        <!-- Berita akan dimasukkan di sini menggunakan JavaScript -->
+      </div>
+      <button class="load-more"></button>
+    </section>
+  </main>
+  
+<script>
+// Data berita
+const newsData = [
+  {
+    image: 'Photo/LC WA/14.png',
+    title: 'Diketahui pegel saat pengembalian buku, pustakawan ini malah mabar ML',
+    description: 'Kejadian aneh ini terjadi ketika orang orang merasa capek di LC ketika ada pengembalian buku di bulan juli dan juni menurut mereka mabar ML lebih baik dari pada angkat buku.',
+    link: '#'
+  },
+  {
+    image: 'Photo/LC WA/26.png',
+    title: 'Bukan ngebantu Pustakawan ini malah mau narsis',
+    description: 'Lain halnya dengan orang ini yang mau narsis ketika saat ada pengembalian buku hadehhhhhh!!!!!!!!!!!!!! untung nya gambar ini diambil pas saat dia nya jauh dari pengawasan bu ketua.',
+    link: '#'
+  },
+  {
+    image: 'Photo/LC WA/11.png',
+    title: 'Seorang Pustakawan lesu karena disuruh kerja rodi terus',
+    description: 'Diketahui pustakawan ini lesu disebabkan bukan hanya di kerja rodi terus, tetapi karena ia sendiri lagi mager dan udah saat nya jam untuk madang sembari main ML BROOO!.',
+    link: '#'
+  },
+  {
+    image: 'Photo/LC WA/43.png',
+    title: 'LENGSERRR!!! ANGAKATAN 24',
+    description: 'Sangat di sayangkan angkatan 24 sudah lengser wauw tapi tidak apa terima kasih banyak yah atas kerja kalian semua atas LC! kami dari angkatan 25 sangattt bersyukur punya kakak seperti kalian!.',
+    link: '#'
+  },
+  {
+    image: 'Photo/LC WA/48.png',
+    title: 'GA HABIS PIKIR! ANGKATAN 26 YANG DAFTAR BANYAK HAMPIR KAYA OSIS',
+    description: 'Di suatu ketika pada saat lagi mau manggil semua personel LC tiba-tiba saja semua angkatan datang dan dilihat angkatan 26 sangat banyak sekali. pstttt hampir hampir mau nyamain OSIS lho! (tapi malah seleksi alam).',
+    link: '#'
+  },
+  // Tambahkan data berita lainnya di sini
+];
+
+const newsContainer = document.querySelector('.news-container');
+const loadMoreBtn = document.querySelector('.load-more');
+
+let currentIndex = 0;
+const itemsPerLoad = 6; // Jumlah berita yang akan dimuat setiap kali tombol "Muat Lebih Banyak" diklik
+
+// Fungsi untuk menambahkan berita ke halaman
+function addNews(news) {
+  const newsItem = document.createElement('div');
+  newsItem.classList.add('news-item');
+
+  const newsImage = document.createElement('img');
+  newsImage.src = news.image;
+  newsImage.alt = news.title;
+  newsItem.appendChild(newsImage);
+
+  const newsTitle = document.createElement('h3');
+  newsTitle.textContent = news.title;
+  newsItem.appendChild(newsTitle);
+
+  const newsDescription = document.createElement('p');
+  newsDescription.textContent = news.description;
+  newsItem.appendChild(newsDescription);
+
+  const newsLink = document.createElement('a');
+  newsLink.href = news.link;
+  newsLink.textContent = 'Baca Selengkapnya';
+  newsItem.appendChild(newsLink);
+
+  newsContainer.appendChild(newsItem);
+}
+
+// Fungsi untuk memuat berita secara bertahap
+function loadNews() {
+  for (let i = currentIndex; i < currentIndex + itemsPerLoad && i < newsData.length; i++) {
+    addNews(newsData[i]);
+  }
+
+  currentIndex += itemsPerLoad;
+
+  // Menyembunyikan tombol "Muat Lebih Banyak" jika semua berita telah dimuat
+  if (currentIndex >= newsData.length) {
+    loadMoreBtn.style.display = 'none';
+  }
+}
+
+// Memuat berita awal
+loadNews();
+
+// Event listener untuk tombol "Muat Lebih Banyak"
+loadMoreBtn.addEventListener('click', loadNews);
+
+// Efek scroll variasi berita
+const newsItems = document.querySelectorAll('.news-item');
+let lastScrollPosition = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScrollPosition > lastScrollPosition) {
+    // Scroll ke bawah
+    newsItems.forEach((item, index) => {
+      item.style.animation = `slideInRight 0.5s ease-in-out ${index * 0.1}s forwards`;
+    });
+  } else {
+    // Scroll ke atas
+    newsItems.forEach((item, index) => {
+      item.style.animation = `slideInLeft 0.5s ease-in-out ${index * 0.1}s forwards`;
+    });
+  }
+
+  lastScrollPosition = currentScrollPosition;
+});    
+</script>
+    
+<!----------- Footer ----------->
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>Jam Operasi</h3>
+      <p>Senin - Jumat: 08.00 — 16.00</p>
+      <p>Sabtu: 10.00 - 15.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
+    </div>
+    <div class="footer-info">
+      <h3>Kontak</h3>
+      <p>Alamat: Jl. Raya Cirendeu No.5, Cireundeu, Kec. Ciputat Tim., Kota Tangerang Selatan, Banten 15419</p>
+      <p>Telepon: (021) 123456789</p>
+      <p>Email: info@lautan.com</p>
+    </div>
+    <div class="footer-info">
+      <h3>Ikuti Kami</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 LibaryClub. All rights reserved.</p>
+  </div>
+</footer>
+
+<!--------------------------------- load java ------------------------------------------->
+  <script>
+    const loadingTexts = [
+      "Memuat Berita sabar yah...",
+      "Menyelam kedalam samudra buku...",
+      "Mengumpulkan info terbaru nih...",
+      "Ngapain coba kamu ini...",
+      "Halo! hari yang bagus bukan?..."
+    ];
+
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loader = document.querySelector('.loader');
+        loader.style.display = 'none';
+      }, 5000);
+
+      const loadingText = document.querySelector('.loading-text');
+      const randomIndex = Math.floor(Math.random() * loadingTexts.length);
+      loadingText.textContent = loadingTexts[randomIndex];
+    });
+  </script>
+    
+    
 </body>
 </html>
