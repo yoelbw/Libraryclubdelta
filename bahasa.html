@@ -1,0 +1,211 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Koleksi Buku|Bahasa</title>
+    <link rel = "icon" href="Photo/LC%20(2).png" type="image/x-icon">
+    <link rel="stylesheet" href="Genre%20style.css">
+    <script src="https://kit.fontawesome.com/1024277203.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!----------------------------------------- load -------------------------------------------------->
+<div class="loader">
+  <div class="wave-container">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <p class="loading-text"></p>
+</div>
+<!----------------------------------------- load -------------------------------------------------->
+<header>
+  <nav class="nav">
+      <div class="logo">
+          <img src="Photo/logo%20sman%208.png" alt="Logo Sekolah" class="school-logo">
+          <span class="collaboration-mark">X</span>
+          <img src="Photo/LC%20(2).png" alt="Logo Perpustakaan" class="library-logo">
+          <h1>Delta's library</h1>
+      </div>
+
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Book.html">Katalog</a></li>
+          <li><a href="LC.html">About us</a></li>
+          <li><a href="Info.html">Berita</a></li>
+      </ul>
+  </nav>
+</header>
+<section class="book" id="page5">
+    <div class="bookback">
+        <i class="fa-solid fa-language"></i>
+    </div>
+    <h1>Bahasa</h1>
+</section>
+    
+<section>
+<nav class="ocean-nav">
+  <ul>
+    <li><a href="karyaumum.html" class="wave-link">Karya Umum</a></li>
+    <li><a href="filsafat.html" class="wave-link">Filasafat & Sosiologi</a></li>
+    <li><a href="agama.html" class="wave-link">Agama</a></li>
+    <li><a href="sosial.html" class="wave-link">Ilmu sosial</a></li>
+    <li><a href="bahasa.html" class="wave-link">Bahasa</a></li>
+    <li><a href="murni.html" class="wave-link">Sains</a></li>
+    <li><a href="teknologi.html" class="wave-link">Teknologi</a></li>
+    <li><a href="kesenian.html" class="wave-link">Seni & Rekreasi</a></li>
+    <li><a href="kesustraan.html" class="wave-link">Kesusastraan</a></li>
+    <li><a href="sejarah.html" class="wave-link">Sejarah</a></li>
+  </ul>
+</nav>
+</section>  
+
+<!----------- Collection ----------->
+<section class="list1">
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search for books...">
+  <button id="searchBtn"><i class="fas fa-search"></i></button>
+</div>
+
+<div class="book-list">
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>The Old Man and the Sea</h3>
+        <p>By Ernest Hemingway</p>
+        <p>Genre: Non-Fiction</p>
+        <p>Publisher: Scribner</p>
+        <p>Year: 1951</p>
+    </div>
+    
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>proloug</h3>
+        <p>By Ernest Hemingway</p>
+        <p>Genre: Fiction</p>
+        <p>Publisher: Scribner</p>
+        <p>Year: 1951</p>
+    </div>
+    
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>ily</h3>
+        <p>By Ernest Hemingway</p>
+        <p>Genre: Mystery</p>
+        <p>Publisher: Scribner</p>
+        <p>Year: 1951</p>
+    </div>
+    
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>i cant have you</h3>
+        <p>By Ernest Hemingway</p>
+        <p>Genre: Fiction</p>
+        <p>Publisher: Scribner</p>
+        <p>Year: 1951</p>
+    </div>
+    
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>wanna go date?</h3>
+        <p>By Ernest Hemingway</p>
+        <p>Genre: Fiction</p>
+        <p>Publisher: Scribner</p>
+        <p>Year: 1951</p>
+    </div>
+    
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>hi im here cant you see me?</h3>
+        <p>By Ernest Hemingway</p>
+        <p>Genre: Fiction</p>
+        <p>Publisher: Scribner</p>
+        <p>Year: 1951</p>
+    </div>
+    
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>please come back</h3>
+        <p>By Ernest Hemingway</p>
+        <p>Genre: Fiction</p>
+        <p>Publisher: Scribner</p>
+        <p>Year: 1951</p>
+    </div>
+    
+  <!-- Add more book cards here -->
+</div>
+</section>
+
+<!-------------- search system ------------->
+<script>
+const searchInput = document.getElementById('searchInput');
+const bookCards = document.querySelectorAll('.book-card');
+
+searchInput.addEventListener('input', function() {
+  const searchText = this.value.toLowerCase();
+
+  bookCards.forEach(card => {
+    const bookTitle = card.querySelector('h3').textContent.toLowerCase();
+    const bookAuthor = card.querySelector('p').textContent.toLowerCase();
+
+    if (bookTitle.includes(searchText) || bookAuthor.includes(searchText)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});    
+</script>
+
+<!----------- Footer ----------->
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>Jam Operasi</h3>
+      <p>Senin - Jumat: 08.00 — 16.00</p>
+      <p>Sabtu: 10.00 - 15.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
+    </div>
+    <div class="footer-info">
+      <h3>Kontak</h3>
+      <p>Alamat: Jl. Raya Cirendeu No.5, Cireundeu, Kec. Ciputat Tim., Kota Tangerang Selatan, Banten 15419</p>
+      <p>Telepon: Not available for now</p>
+      <p>Email: libraryclubdelta@gmail.com</p>
+    </div>
+    <div class="footer-info">
+      <h3>Ikuti Kami</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/library.clubid?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 LibaryClub. All rights reserved.</p>
+  </div>
+</footer>
+
+<!--------------------------------- load java ------------------------------------------->
+<script>
+  const loadingTexts = [
+    "Fun fact: buku bukan cuma ada genre tapi ada DCC!",
+    "Sedang menyelam kedalam samudra buku",
+    "Memuat para buku-buku",
+    "Hayo lagi ngapain!",
+    "Apakah kamu tau, kamu ini pintar!"
+  ];
+
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const loader = document.querySelector('.loader');
+      loader.style.display = 'none';
+    }, 3000);
+
+    const loadingText = document.querySelector('.loading-text');
+    const randomIndex = Math.floor(Math.random() * loadingTexts.length);
+    loadingText.textContent = loadingTexts[randomIndex];
+  });
+</script>
+</body>
+</html>

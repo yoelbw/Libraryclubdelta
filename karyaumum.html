@@ -2,125 +2,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <title>Koleksi Buku</title>
-    <link rel = "icon" href="Photo/logo%20lc.png" type="image/x-icon">
-    <link rel="stylesheet" href="karyaumum.css">
+    <title>Koleksi Buku|Karya Umum</title>
+    <link rel = "icon" href="Photo/LC%20(2).png" type="image/x-icon">
+    <link rel="stylesheet" href="Genre%20style.css">
     <script src="https://kit.fontawesome.com/1024277203.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<section class="book">
+<!----------------------------------------- load -------------------------------------------------->
+<div class="loader">
+  <div class="wave-container">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <p class="loading-text"></p>
+</div>
+<!----------------------------------------- load -------------------------------------------------->
+<header>
+  <nav class="nav">
+      <div class="logo">
+          <img src="Photo/logo%20sman%208.png" alt="Logo Sekolah" class="school-logo">
+          <span class="collaboration-mark">X</span>
+          <img src="Photo/LC%20(2).png" alt="Logo Perpustakaan" class="library-logo">
+          <h1>Delta's library</h1>
+      </div>
+
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Book.html">Katalog</a></li>
+          <li><a href="LC.html">About us</a></li>
+          <li><a href="Info.html">Berita</a></li>
+      </ul>
+  </nav>
+</header>
+<section class="book" id="page1">
     <div class="bookback">
-    <i class="fa-solid fa-book"></i>
+    <i class="fas fa-book"></i>
     </div>
-    <h1>KOLEKSI BUKU</h1>
+    <h1>Karya Umum</h1>
 </section>
     
 <section>
-    <div class="topnav">
-        <a href="karyaumum.html">Karya Umum</a>
-        <a href="#news">Filsafat & Pisilogi</a>
-        <a href="#contact">Agama</a>
-        <a href="#about">Sosial & Science</a>
-        <a href="#news">Bahasa</a>
-        <a href="#contact">Ilmu Murni</a>
-        <a href="#about">Teknologi</a>
-        <a href="#news">Kesenian dan Hiburan</a>
-        <a href="#contact">Kesusastraan</a>
-        <a href="#about">Sejarah & Geografi</a>
-    </div>
-    
-    <div class="topnav1">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </div>
-</section>
-    
-    
-    
+<nav class="ocean-nav">
+  <ul>
+    <li><a href="karyaumum.html" class="wave-link">Karya Umum</a></li>
+    <li><a href="filsafat.html" class="wave-link">Filasafat & Sosiologi</a></li>
+    <li><a href="agama.html" class="wave-link">Agama</a></li>
+    <li><a href="sosial.html" class="wave-link">Ilmu sosial</a></li>
+    <li><a href="bahasa.html" class="wave-link">Bahasa</a></li>
+    <li><a href="murni.html" class="wave-link">Sains</a></li>
+    <li><a href="teknologi.html" class="wave-link">Teknologi</a></li>
+    <li><a href="kesenian.html" class="wave-link">Seni & Rekreasi</a></li>
+    <li><a href="kesustraan.html" class="wave-link">Kesusastraan</a></li>
+    <li><a href="sejarah.html" class="wave-link">Sejarah</a></li>
+  </ul>
+</nav>
+</section>  
+
 <!----------- Collection ----------->
 <section class="list1">
-    <div class="list">
-        <div class="left-col">
-            <p>800+ Book</p>
-            <h1>Recommended and available books</h1>
-            <div class="house">
-                <div class="house-img">
-                    <img src="Photo/logo%20lc.png">
-                </div>
-                <div class="house-info">
-                    <p>Johannes Van den Bosch / 1830</p>
-                    <h3>Cultuurstelsel</h3>
-                        <h5>Cultuurstelsel, yang oleh sejarawan Indonesia disebut sebagai Sistem Tanam Paksa, adalah peraturan yang dikeluarkan oleh Gubernur Jenderal Johannes van den Bosch pada tahun 1830 yang mewajibkan setiap desa menyisihkan sebagian tanahnya untuk ditanami komoditas ekspor, khususnya teh, kopi, dan kakao.</h5>
-                    <p>924 - History & geography</p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <div class="book-status">
-                        <p>Available</p>
-                        <h4>More info</h4>
-                    </div>
-                </div>
-            </div>
-               <div class="house">
-                <div class="house-img">
-                    <img src="Photo/logo%20lc.png">
-                </div>
-                <div class="house-info">
-                    <p>Julius Caesar / 1M</p>
-                    <h3>Devide impera</h3>
-                        <h5>Politik pecah belah, politik adu domba, atau divide et impera adalah kombinasi strategi politik, militer, dan ekonomi yang bertujuan mendapatkan dan menjaga kekuasaan dengan cara memecah kelompok besar menjadi kelompok-kelompok kecil yang lebih mudah ditaklukkan.</h5>
-                    <p>925 - History & geography</p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <div class="book-status">
-                        <p>Available</p>
-                        <h4>More info</h4>
-                    </div>
-                </div>
-            </div>
-               <div class="house">
-                <div class="house-img">
-                    <img src="Photo/logo%20lc.png">
-                </div>
-                <div class="house-info">
-                    <p>Private Villa in San Francisco</p>
-                    <h3>Deluxe queen room with street view</h3>
-                    <p>1 bedroom / 1 bathroom / wifi / kitchen</p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-            </div>
-        </div>
-        
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search for books...">
+  <button id="searchBtn"><i class="fas fa-search"></i></button>
+</div>
+
+<div class="book-list">
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Kenali komputer PC anda</h3>
+        <p>Anak judul: Panduan merakit PC</p>
+        <p>Nomer buku: 4</p>
+        <p>Pengarang: Oke Hendrary, S.kom, MCSE, Asep Suheri ST</p>
+        <p>Penerbit: Dataprin grafitama</p>
+        <p>Tahun Terbit: 2003</p>
+        <p>Sumber Buku: ALUMNI tahun 2014/2015</p>
+        <p>ISBN:  979-98136-0-3</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Singkat tepat jelas membuat presentasi cantik dengan power point 2002</h3>
+        <p>Anak judul: -</p>
+        <p>Nomer buku: 5</p>
+        <p>Pengarang: ir. pandapotan sianipar</p>
+        <p>Penerbit: PT. Elex Media Komputindo</p>
+        <p>Tahun Terbit: 2003</p>
+        <p>Sumber Buku: Hibah</p>
+        <p>ISBN: 979-20-4330-6</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Reformasi batin</h3>
+        <p>Anak judul: Sang perintis</p>
+        <p>Nomer buku: 92</p>
+        <p>Pengarang: A.R.Baswedan</p>
+        <p>Penerbit: PT. Wijan pustaka</p>
+        <p>Tahun Terbit: 2015</p>
+        <p>Sumber Buku: Hibah</p>
+        <p>ISBN: 978-979-433-890-2</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Smart box series Untuk pemula sebagai hobi dan bisnis</h3>
+        <p>Anak judul: -</p>
+        <p>Nomer buku: 6,686</p>
+        <p>Pengarang: Dila candra Kirana</p>
+        <p>Penerbit: DAN idea</p>
+        <p>Tahun Terbit: 2013</p>
+        <p>Sumber Buku: DANA BOS</p>
+        <p>ISBN: 602-9069-07-1</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>WIFI (WIRELESS LAN)</h3>
+        <p>Anak judul: Jaringan komputer tanpa kabel</p>
+        <p>Nomer buku:  004.66</p>
+        <p>Pengarang: Gunadi Dwi Hantoro</p>
+        <p>Penerbit: Informatika Bandung</p>
+        <p>Tahun Terbit: 2009</p>
+        <p>Sumber Buku: Hibah</p>
+        <p>ISBN: 978-979-1153-89-8</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Mengembangkan E-Learning sekolah</h3>
+        <p>Anak judul: -</p>
+        <p>Nomer buku: 00.1</p>
+        <p>Pengarang: Sukari, spd., m.pd.</p>
+        <p>Penerbit: Erlangga</p>
+        <p>Tahun Terbit: 2014</p>
+        <p>Sumber Buku: DANA BOS</p>
+        <p>ISBN: 308-005-001-0</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Dunia komunikasi dan gadget</h3>
+        <p>Anak judul: Evaluasi alat komunikasi, menjelajah jarak dengan gadget</p>
+        <p>Nomer buku: 004.16</p>
+        <p>Pengarang: Syerif nur Hakim</p>
+        <p>Penerbit: Bestari</p>
+        <p>Tahun Terbit: 2015</p>
+        <p>Sumber Buku: Dana BOS</p>
+        <p>ISBN: 978-602-341-001-9</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Mengupas tuntas Cisco rounter</h3>
+        <p>Anak judul: -</p>
+        <p>Nomer buku: 004.77</p>
+        <p>Pengarang: Rahmat Rafiudin</p>
+        <p>Penerbit: PT. Elex Media Komputindo</p>
+        <p>Tahun Terbit: 2003</p>
+        <p>Sumber Buku: Hibah</p>
+        <p>ISBN: 979-20-4703-4</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Buku pintar Microsoft office </h3>
+        <p>Anak judul: -</p>
+        <p>Nomer buku: 005.2</p>
+        <p>Pengarang: yozi aulia putri </p>
+        <p>Penerbit: Mediakita</p>
+        <p>Tahun Terbit: 2014</p>
+        <p>Sumber Buku: DANA BOS</p>
+        <p>ISBN: 979-794-465-4</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Trik Explorasi Dreamweaver mix</h3>
+        <p>Anak judul: -</p>
+        <p>Nomer buku: 006.6</p>
+        <p>Pengarang: ferri herlambang</p>
+        <p>Penerbit: PT. Elex Media Komputindo</p>
+        <p>Tahun Terbit: 2005</p>
+        <p>Sumber Buku: ALUMNI tahun 2014/2015</p>
+        <p>ISBN: 979-20-6632-2</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Mahir dalam 7 hari corelDRAW X7</h3>
+        <p>Anak judul: -</p>
+        <p>Nomer buku: 006.86</p>
+        <p>Pengarang: Madcoms</p>
+        <p>Penerbit: ANDI</p>
+        <p>Tahun Terbit: 2015</p>
+        <p>Sumber Buku: DANA BOS</p>
+        <p>ISBN: 978-979-29-5041-0</p>
+    </div>
+    <div class="book-card">
+        <img src="book1.jpg">
+        <h3>Penyelesaian sengketa pers</h3>
+        <p>Anak judul: -</p>
+        <p>Nomer buku: 070.4</p>
+        <p>Pengarang: juniver girsang SH, MH</p>
+        <p>Penerbit: PT. Gramedia Pustaka Utama</p>
+        <p>Tahun Terbit: 2007</p>
+        <p>Sumber Buku: Hibah</p>
+        <p>ISBN: 978-22-2746-8</p>
     </div>
     
-    
+  <!-- Add more book cards here -->
+</div>
 </section>
+
+<!-------------- search system ------------->
+<script>
+const searchInput = document.getElementById('searchInput');
+const bookCards = document.querySelectorAll('.book-card');
+
+searchInput.addEventListener('input', function() {
+  const searchText = this.value.toLowerCase();
+
+  bookCards.forEach(card => {
+    const bookTitle = card.querySelector('h3').textContent.toLowerCase();
+    const bookAuthor = card.querySelector('p').textContent.toLowerCase();
+
+    if (bookTitle.includes(searchText) || bookAuthor.includes(searchText)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});    
+</script>
 
 <!----------- Footer ----------->
-<section class="footer">
-    <h4>About us</h4>
-    <p>OPERATION TIME</p>
-    <p>Senin-Jumat 08.00 - 16.00 WIB<br>Sabtu-Minggu 09.00 - 15.30 WIB<br>Cuti Bersama dan Libur Nasional Tutup</p>
-    <br>
-    <p>CONTACT<br>Natalie(+62 812-9474-5420)</p>
-    <br>
-    <div class="icons">
-        <i class="fa-brands fa-instagram"></i>
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>Jam Operasi</h3>
+      <p>Senin - Jumat: 08.00 — 16.00</p>
+      <p>Sabtu: 10.00 - 15.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
     </div>
-    <br>
-    <p>Copyright 2023 Made by personel of LC</p>
-</section>
+    <div class="footer-info">
+      <h3>Kontak</h3>
+      <p>Alamat: Jl. Raya Cirendeu No.5, Cireundeu, Kec. Ciputat Tim., Kota Tangerang Selatan, Banten 15419</p>
+      <p>Telepon: Not available for now</p>
+      <p>Email: libraryclubdelta@gmail.com</p>
+    </div>
+    <div class="footer-info">
+      <h3>Ikuti Kami</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/library.clubid?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 LibaryClub. All rights reserved.</p>
+  </div>
+</footer>
 
+<!--------------------------------- load java ------------------------------------------->
+<script>
+  const loadingTexts = [
+    "Fun fact: buku bukan cuma ada genre tapi ada DCC!",
+    "Sedang menyelam kedalam samudra buku",
+    "Memuat para buku-buku",
+    "Hayo lagi ngapain!",
+    "Apakah kamu tau, kamu ini pintar!"
+  ];
+
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const loader = document.querySelector('.loader');
+      loader.style.display = 'none';
+    }, 3000);
+
+    const loadingText = document.querySelector('.loading-text');
+    const randomIndex = Math.floor(Math.random() * loadingTexts.length);
+    loadingText.textContent = loadingTexts[randomIndex];
+  });
+</script>
 </body>
 </html>

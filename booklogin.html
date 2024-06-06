@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sirkulasi</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel = "icon" href="Photo/LC%20(2).png" type="image/x-icon"> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://kit.fontawesome.com/1024277203.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="body">
+    <div class="container">
+        <h1>Ayo Ambil, pilih, dan pinjam buku favoritmu!</h1>
+        <div class="benefits">
+            <h2>Ketentuan Meminjam buku</h2>
+            <ul>
+                <li>Batas pengembalian buku dalam 1 minggu kedepan</li>
+                <li>Jika sudah 1 minggu, kamu bisa memperpanjang dengan pergi ke meja Sirkulasi</li>
+                <li>Tolong isi Form ini dengan keterangan yang kalian miliki dan jangan asal</li>
+                <li>Jika buku rusak/hilang/lewat dari batas peminjaman akan dikenakan denda</li>
+            </ul>
+        </div>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="name">Nama & kelas</label>
+                <input type="text" id="name" name="name" placeholder="Tuliskan Lengkap mu disini Beserta kelas" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Tuliskan alamat emailmu agar kami dapat memberi jawaban kepada anda" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Identitas Buku</label>
+                <textarea id="message" name="message" placeholder="Tuliskan Identitas buku yang kamu ingin pinjam. mintalah batuan kepada anggota LC jika tidak memahami bagian ini. (JANGAN ASAL ISI!)" required></textarea>
+            </div>
+            <button type="submit">Pinjam</button>
+        </form>
+        <div id="response" style="display: none;">
+            <h2>Terima kasih telah mendaftar!</h2>
+            <p>Kami akan meninjau pendaftaran Anda dan menghubungi Anda kembali melalui email di <span id="submittedEmail"></span>.</p>
+        </div>
+    </div>
+
+<script>
+const form = document.getElementById('signupForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+const responseContainer = document.getElementById('response');
+const submittedEmailSpan = document.getElementById('submittedEmail');
+
+const serviceID = 'service_7n6ht08';
+const templateID = 'template_y4hvf9r';
+const userID = 'lq9JdgeliJNSdcm6A';
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = {
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value
+    };
+
+    emailjs.sendForm(serviceID, templateID, form, userID, formData)
+    .then((response) => {
+        // Reset input formulir
+        nameInput.value = '';
+        emailInput.value = '';
+        messageInput.value = '';
+
+        // Tampilkan kontainer respons
+        responseContainer.style.display = 'block';
+        submittedEmailSpan.textContent = formData.email;
+
+        // Tambahkan animasi pada kontainer respons
+        responseContainer.style.opacity = 0;
+        setTimeout(() => {
+            responseContainer.style.transition = 'opacity 0.5s ease-in';
+            responseContainer.style.opacity = 1;
+        }, 100);
+
+        // Lakukan tindakan tambahan setelah email balasan otomatis terkirim
+        if (response.status === 200 && response.text === 'OK') {
+            console.log('Email balasan otomatis terkirim');
+            // Tambahkan logika lain di sini jika diperlukan
+        }
+    })
+    .catch((error) => {
+        console.error('Terjadi kesalahan saat mengirim email:', error);
+        alert('Terjadi kesalahan saat mengirim formulir. Silakan coba lagi nanti.');
+    });
+});
+</script>
+</section>
+</body>
+</html>

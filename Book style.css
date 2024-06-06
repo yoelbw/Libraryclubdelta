@@ -3,10 +3,173 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
+/*-------------------------------------------------------------------------------------------------------*/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0077b6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.wave-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.wave {
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, #b3e5fc, #4fc3f7);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.loading-indicator img {
+  width: 150px;
+  height: 30px;
+}
+
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading-text {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 1000px; /* Tambahkan batas maksimum lebar */
+    white-space: nowrap; /* Mencegah teks memanjang ke bawah */
+    overflow: hidden; /* Menyembunyikan teks yang melebihi lebar maksimum */
+    text-overflow: ellipsis; /* Menambahkan tanda ellipsis (...) jika teks melebihi lebar maksimum */
+    opacity: 0; /* Menambahkan opacity: 0 pada awal */
+    animation: fade-in 1s ease-in-out forwards; /* Menambahkan animasi fade in */
+    animation-delay: 0.3s; /* Menunda animasi selama 1 detik */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------*/
+/* Gaya untuk header dan navigasi */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.school-logo, .library-logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.collaboration-mark {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 10px;
+  color: dodgerblue; /* Warna yang sesuai dengan tema laut */
+}
+
+.library-logo {
+  margin-left: 10px;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1abc9c;
+}
+
+.header {
+  text-align: center;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 100px;
+  background-color: #0077b6;
+  padding: 1rem;
+  color: #fff;
+}
 .book{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/library.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/3.png);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -21,170 +184,277 @@
 .book img{
     width: 140px;
 }
-/*------ nav nav -------*/
-.card {
-  position: relative;
-  width: 11.875em;
-  height: 16.5em;
-  box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: all 120ms;
+
+/*--------- tab nav ----------*/
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 36px;
+  color: #0077b6;
+  margin-bottom: 40px;
+}
+
+.tab-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.tab-nav {
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: #fff;
-  padding: 0.5em;
-  padding-bottom: 3.4em;
+  margin-bottom: 20px;
 }
 
-.card::after {
-  content: "read now";
-  padding-top: 1.25em;
-  padding-left: 1.25em;
-  position: absolute;
-  left: 0;
-  bottom: -60px;
-  background: #00AC7C;
+.tab-btn {
+  background-color: #0077b6;
   color: #fff;
-  height: 2.5em;
-  width: 90%;
-  transition: all 80ms;
-  font-weight: 600;
-  text-transform: uppercase;
-  opacity: 0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.card .title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
-  position: absolute;
-  left: 0.625em;
-  bottom: 1.875em;
-  font-weight: 400;
-  color: #000;
+.tab-btn.active {
+  background-color: #00bfff;
 }
 
-.card .price {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 0.9em;
-  position: absolute;
-  left: 0.625em;
-  bottom: 0.625em;
-  color: #000;
+.tab-content {
+  text-align: left;
 }
 
-.card:hover::after {
-  bottom: 0;
-  opacity: 1;
+.tab-pane {
+  display: none;
+  padding: 20px;
 }
 
-.card:active {
-  transform: scale(0.98);
+.tab-pane.active {
+  display: block;
 }
 
-.card:active::after {
-  content: "Added !";
-  height: 3.125em;
+.tab-pane h2 {
+  font-size: 24px;
+  color: #0077b6;
+  margin-bottom: 10px;
 }
 
-.text {
-  max-width: 55px;
+.tab-pane p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-.image {
-  background: rgb(241, 241, 241);
-  width: 100%;
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .tab-nav {
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    margin-bottom: 10px;
+  }
+}
+
+/*--- tab nav home  ---*/
+
+.genre-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.genre-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  width: 150px;
+}
+.genre-card:nth-child(1){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/karya.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.genre-card:nth-child(2){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/sosio.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.genre-card:nth-child(3){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/agama.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.genre-card:nth-child(4){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/sosial.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.genre-card:nth-child(5){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/bahasa.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.genre-card:nth-child(6){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/sains.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.genre-card:nth-child(7){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/teknologi.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.genre-card:nth-child(8){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/seni.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.genre-card:nth-child(9){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/sastra.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.genre-card:nth-child(10){
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/sejarah.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.genre-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.genre-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+
+.genre-card h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/*------- buku khusus ---------*/
+.Khusus{
+  justify-content: center;
+  text-align: center;
+}
+.Khusus h3{
+  padding: 30px;
+}
+.card {
+  max-width: 100%;
+  height: 254px;
+  border-radius: 4px;
+  display: flex;
+  gap: 5px;
+  padding: .4em;
+  margin-bottom: 1%;
+}
+.card p {
   height: 100%;
-  display: grid;
-  place-items: center;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all .5s;
+  background: #212121;
+  border: 3px solid darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/*--------- search bar ---------*/
-
-.topnav1{
-    border: 1px solid black;
-    text-align: center;
-    background-color: white;
-    overflow: hidden;
+.card p:hover {
+  flex: 4;
 }
-.topnav1 input[type=text] {
-    text-align: center;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
+.card p span {
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all .5s;
+  text-transform: uppercase;
+  color: dodgerblue;
+  letter-spacing: .1em;
 }
-
-
-
-/*-------- list -------*/
-.list1{
-    padding: 0 7%;
+.card p:hover span {
+  color: white;
+  transform: rotate(0);
 }
-.list{
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.left-col{
-    flex-basis: 70%;
-}
-.left-col h1{
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-.house{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 30px 0;
-    border-top: 1px solid #ccc;
-}
-.house-img{
-    flex-basis: 40%;
-}
-.house-info{
-    flex-basis: 58%;
-    color: #555;
-}
-.house-img img{
-    width: 50%;
-    border-radius: 12px;
-}
-.house-info h3{
-    font-weight: 600;
-    color: #333;
-    font-size: 22px;
-    margin: 4px 0;
-    text-decoration: underline;
-}
-.house-info i{
-    margin: 13px 1px;
-    color: black;
-    font-size: 18px;
-}
-.book-status{
-    text-align: right;
-}
-.book-status h4{
-    font-size: 20px;
-}
-
-
-
-
 
 /*--- footer ---*/
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-    color: white;
-    background-color: black;
+footer {
+    position: relative;
+  background-color: #1e3d59;
+  color: #fff;
+  padding: 40px 0;
 }
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info {
+  flex: 0 0 300px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-info p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00bfff;
+}
+
+.footer-bottom {
+  background-color: #163552;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 0;
 }

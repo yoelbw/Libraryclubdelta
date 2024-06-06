@@ -1,16 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delta's Library</title>
     <link rel = "icon" href="Photo/LC%20(2).png" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/1024277203.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    
 <!----------------------------------------- load -------------------------------------------------->
 <div class="loader">
     <div class="wave-container">
@@ -20,111 +21,93 @@
       <div class="wave"></div>
       <div class="wave"></div>
     </div>
-    <div class="loading-indicator">
-      <img src="loading.gif" alt="Loading">
-      <p class="loading-text"></p>
-    </div>
+    <p class="loading-text"></p>
 </div>
 <!----------------------------------------- load -------------------------------------------------->
-    
-<!----------------------------------------------- Tilte --------------------------------------------------->
-<section class="background">
-        <img src="Photo/logo%20sman%208.png">
-        <h1>SMAN 8 KOTA<br>TANGERANG<br>SELATAN</h1>
-        <div class="header">
-            <h1>Delta's Library</h1>
-            <p>Tidak ada yang Lebih Menyenangkan Dari pada Menjelajahi Perpustakaan</p>
-            <br>
-            <a href="https://maps.app.goo.gl/Aw7DjjZnGPjZ4PDx7"><button class="button"></button></a>
-        </div>
-</section>
 
-<!--------------------------------------------- Explanation ------------------------------------------------------>
-<section>
-    <header>    
-        <h1>Library Club</h1>
-    </header>
+<header>
+  <nav>
+      <div class="logo">
+          <img src="Photo/logo%20sman%208.png" alt="Logo Sekolah" class="school-logo">
+              <span class="collaboration-mark">X</span>
+          <img src="Photo/LC%20(2).png" alt="Logo Perpustakaan" class="library-logo">
+            <h1>Delta's library</h1>
+      </div>
 
-    <div class="row">
-        <div class="exp-col">
-        <img src="Photo/LC%20(2).png">
-            <p>
-                Library Club SMAN 8 Kota Tangerang Selatan adalah Sebuah Organisasi Sekaligus Ekskul yang membantu dan berperan Penting dalam mengelola buku-buku sekolah SMAN 8. Seperti contoh ketika ada nya pengembalian dan pemberian buku baru, Library Club serta Para Personel kami semua akan ikut turun tangan bahkan Mengatur jalannya kegiatan tersebut. Di Ekskul ini juga lah, kita dapat dapat mempelajari banyak hal tentang Perpustakaan dan segala system yang diterapkan disana. Kamu tertarik? ayo cuss Daftar aja!
-            </p>
-        </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Book.html">Katalog</a></li>
+        <li><a href="LC.html">About us</a></li>        
+        <li><a href="Info.html">Berita</a></li>                      
+      </ul>
+
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
     </div>
-</section>
-   
-<section >
-    <header>    
-        <h1>Koleksi Buku</h1>
-    </header>
-    
-    <div class="row">
-        <div class="exp-col">
-        <img src="Photo/collection.png">
-            <p>
-                Kami mempunyai banyak Buku Juga yang dapat kalian baca. Sayangnya kami masih dalam tahap Perkembangan, jadi perpustakaan kami mempunyai sistem hybrid atau bisa dibilang belum sepenuhnya digital. Jika ingin membaca buku kalian bisa mengetahui daftar-daftar buku apa saja yang ada di library Club Lewat website ini dan bisa mendatangi Perpustakaan kami untuk meminjam buku tersebut.
-            </p>
-        </div>
-    </div>
-</section>
 
-<section>
-    <header>    
-        <h1>Informasi</h1>
-    </header>
-    <div class="row">
-        <div class="exp-col">
-        <img src="Photo/Info.png">
-            <p>
-                Library Club sekarang Mempunyayi Page Informasi lho! Di page ini kami akan mengupdate seputar kegiatan-kegiatan yang ada Library Club, dan juga seputar buku-buku baru yang akan kami tambahkan. oh iya tak ketinggalan kami juga mempunyai mading Digital disini!. Jadi stay tune yah, kalau ada apa-apa kalian bisa kontak para personel kami juga atau di nomer yang tertera dalam footer atau informasi.
-            </p>
-        </div>
-    </div>
-</section>
+  </nav>
+</header>
+<script>
+const navSlide = () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
 
-<!------------------------------------------------- Option ------------------------------------------------------->
-<section class="backoption">
-    <header>
-        <h1>INTEREST? LET'S TAKE A LOOK AROUND</h1>
-    </header>
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    burger.classList.toggle('toggle');
+  });
 
-<div class="cont-option">
-    <div class="card">
-        <div class="card2">
-            <a href="LC.html">
-            <img src="Photo/LC%20(2).png">
-                <div class="layer">
-                    <h3>LIBRARY CLUB</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card2">
-            <a href="Book.html">
-            <img src="Photo/collection.png">
-            <div class="layer">
-                <h3>KOLEKSI BUKU</h3>
+  navLinks.forEach((link, index) => {
+    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+  });
+};
+
+navSlide();
+  </script>
+
+<main>
+        <section class="hero parallax">
+            <div class="hero-content">
+                <h2>Selamat Datang di Web Static Perpustakaan</h2>
+                <p>Website ini merupakan hasil kolaborasi dan dedikasi kami para anggota Library Club. Dan dipersembahkan untuk memudahkan akses informasi dan layanan perpustakaan bagi para pecinta buku di SMAN 8 Tangsel Untuk meningkatkan minat baca dan budaya literasi di sekolah.
+                  <br>
+                  <br>
+                  Ayo kunjungi website ini dan temukan buku favoritmu!</p>
+                <a href="Book.html" class="btn">Jelajahi Koleksi</a>
             </div>
-            </a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card2">
-            <a href="Info.html">
-            <img src="Photo/Info.png">
-                <div class="layer">
-                    <h3>INFORMASI</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-    
-</section> 
-    
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img src="Photo/collection.png">
+                <h3>Koleksi Lengkap</h3>
+                <p>Kami memiliki koleksi buku yang luas, dari buku novel hingga buku ilmu pengetahuan, untuk memenuhi kebutuhan semua pembaca.</p>
+            </div>
+            <div class="feature">
+                <img src="Photo/LC%20(2).png">
+                <h3>Komunitas Pembaca</h3>
+                <p>Bergabunglah dengan komunitas pembaca kami dan berbagi minat serta rekomendasi buku.</p>
+            </div>
+            <div class="feature">
+                <img src="Photo/Info.png">
+                <h3>Acara dan Kegiatan</h3>
+                <p>Kami mengadakan berbagai acara dan kegiatan menarik seperti library for everyone, diskusi buku, dan lainnya.</p>
+            </div>
+        </section>
+
+        <section class="cta parallax">
+            <div class="cta-content">
+                <h2>Jadilah Anggota Hari Ini</h2>
+                <p>Daftarkan diri Anda sekarang dan nikmati keuntungan yang lebih dari perpustakaan kami.</p>
+                <a href="login.html" class="btn">Daftar Sekarang</a>
+            </div>
+        </section>
+    </main>
+
+
 <!------------------------------------------------- Footer -------------------------------------------------------->
 <footer>
   <div class="footer-container">
@@ -137,15 +120,13 @@
     <div class="footer-info">
       <h3>Kontak</h3>
       <p>Alamat: Jl. Raya Cirendeu No.5, Cireundeu, Kec. Ciputat Tim., Kota Tangerang Selatan, Banten 15419</p>
-      <p>Telepon: (021) 123456789</p>
-      <p>Email: info@lautan.com</p>
+      <p>Telepon: Not available for now</p>
+      <p>Email: libraryclubdelta@gmail.com</p>
     </div>
     <div class="footer-info">
       <h3>Ikuti Kami</h3>
       <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/library.clubid?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </div>
@@ -157,7 +138,7 @@
 <!------------------------------------------------ load java ------------------------------------------------------->
   <script>
     const loadingTexts = [
-      "HEYA!, Delta's Library Club is Here!",
+      "HI the Delta's Library Club is Here!",
       "Selamat Datang Yah!",
       "Selamat Menjelajah!",
       "Hai Semoga Hari Mu baik yah!",
@@ -168,7 +149,7 @@
       setTimeout(function() {
         const loader = document.querySelector('.loader');
         loader.style.display = 'none';
-      }, 5000);
+      }, 3000);
 
       const loadingText = document.querySelector('.loading-text');
       const randomIndex = Math.floor(Math.random() * loadingTexts.length);

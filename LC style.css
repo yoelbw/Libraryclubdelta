@@ -79,7 +79,7 @@
     color: #fff;
     margin-top: 10px;
     text-align: center;
-    max-width: 300px; /* Tambahkan batas maksimum lebar */
+    max-width: 1000px; /* Tambahkan batas maksimum lebar */
     white-space: nowrap; /* Mencegah teks memanjang ke bawah */
     overflow: hidden; /* Menyembunyikan teks yang melebihi lebar maksimum */
     text-overflow: ellipsis; /* Menambahkan tanda ellipsis (...) jika teks melebihi lebar maksimum */
@@ -97,6 +97,63 @@
   }
 }
 /*-------------------------------------------------------------------------------------------------------*/
+/* Gaya untuk header dan navigasi */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.school-logo, .library-logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.collaboration-mark {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 10px;
+  color: dodgerblue; /* Warna yang sesuai dengan tema laut */
+}
+
+.library-logo {
+  margin-left: 10px;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1abc9c;
+}
 
 .LC{
     height: 50vh;
@@ -114,9 +171,21 @@
     font-weight: 700;
 }
 .LC img{
-    width: 100px;
+    width: 140px;
 }
 
+.header {
+  text-align: center;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 100px;
+  background-color: #0077b6;
+  padding: 1rem;
+  color: #fff;
+}
 /*-------------------------------------------------- Opening --------------------------------------------------*/
 .about-col{
     width: 80%;
@@ -300,13 +369,6 @@
 }
 
 /*--------------------------------------------- Struktur Organisasi ---------------------------------------------*/
-header {
-    background-color: #0077b6;
-    text-align: center;
-    padding: 1rem;
-    color: #fff;
-}
-
 /* Struktur Organisasi */
 .org-chart {
     background-size: contain;
@@ -430,6 +492,54 @@ header {
   text-align: center;
   transition: opacity 0.3s ease-in-out;
 }
+
+/*---------------------------------------------------------- call to action -------------------------------------------------------*/
+.cta{
+  margin: 100px auto;
+  width: 90vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("Photo/LC WA/45.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.cta h1{
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.collaboration-mark1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 10px;
+  color: white;
+}
+
+@media(max-width: 700px){
+  .cta h1{
+      font-size: 24px;
+  }
+}
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover{
+  border: 1px solid #36aef4;
+  background: #36aef4;
+  transition: 1s;
+}
+
 /*---------------------------------------- footer ---------------------------------------------------------*/
 /* Footer */
 footer {

@@ -10,61 +10,272 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+<!----------------------------------------- load -------------------------------------------------->
+<div class="loader">
+  <div class="wave-container">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <p class="loading-text"></p>
+</div>
+<!----------------------------------------- load -------------------------------------------------->
+<header>
+  <nav>
+      <div class="logo">
+          <img src="Photo/logo%20sman%208.png" alt="Logo Sekolah" class="school-logo">
+          <span class="collaboration-mark">X</span>
+          <img src="Photo/LC%20(2).png" alt="Logo Perpustakaan" class="library-logo">
+          <h1>Delta's library</h1>
+      </div>
+
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Book.html">Katalog</a></li>
+          <li><a href="LC.html">About us</a></li>
+          <li><a href="Info.html">Berita</a></li>
+      </ul>
+  </nav>
+</header>
 <section class="book">
     <img src="Photo/collection.png">
     <h1>KOLEKSI BUKU</h1>
 </section>  
 
+<div class="header">
+  <h2>Lebih dari 800+ Buku berada di Library Club</h2>
+  <h2>Sedang mencari genre buku apa?</h2>
+</div>
+
 <!---------- navigation ------------->
 <section>
-        <h2>Lebih dari 800+ Buku berada di Library Club</h2>
-        <h2>Sedang mencari genre buku apa?</h2>
-    <div class="topnav">
-    
+ <div class="container">
+    <h1>Genre Buku / DDC buku</h1>
+    <div class="tab-container">
+      <div class="tab-nav">
+        <button class="tab-btn active" data-target="#umum">Karya Umum</button>
+        <button class="tab-btn" data-target="#filasafat">Filasafat & Sosiologi</button>
+        <button class="tab-btn" data-target="#agama">Agama</button>
+        <button class="tab-btn" data-target="#sosial">Ilmu sosial</button>
+        <button class="tab-btn" data-target="#bahasa">Bahasa</button>
+        <button class="tab-btn" data-target="#sains">Sains</button>
+        <button class="tab-btn" data-target="#teknologi">Teknologi</button>
+        <button class="tab-btn" data-target="#seni">Seni & Rekreasi</button>
+        <button class="tab-btn" data-target="#sastra">Kesusastraan</button>
+        <button class="tab-btn" data-target="#sejarah">Sejarah & Geografi</button>
+      </div>
+      <div class="tab-content">
+        <div id="umum" class="tab-pane active">
+          <h2>Karya Umum</h2>
+          <p>Dalam kategori DCC karya umum itu termasuk kedalam nomer 000 yang dimana disana dibagi lagi dan terdapat:<br>000 - Ensiklopedi, Kamus, Bibliografi, Jurnalisme, Ilmu perpustakaan, Komputer<br>Dengan Jumlah = 000</p>
+        </div>
+        <div id="filasafat" class="tab-pane">
+          <h2>Filasafat & Sosiologi</h2>
+          <p>Dalam kategori DCC filasafat itu termasuk kedalam nomer 100 yang dimana disana dibagi lagi dan terdapat:<br>100 - Metafisika, Epistemologi, Etika, Psikologi, Logika<br>Dengan Jumlah = 000</p>
+        </div>
+        <div id="agama" class="tab-pane">
+          <h2>Agama</h2>
+          <p>Dalam kategori DCC agama itu termasuk kedalam nomer 200 yang dimana disana dibagi lagi dan terdapat:<br>200 - Agama Kristen, Agama Islam, Agama Hindu, Agama Buddha, Yudaisme<br>Dengan Jumlah = 000</p>
+        </div>
+        <div id="sosial" class="tab-pane">
+          <h2>Ilmu Sosial</h2>
+          <p>Dalam kategori DCC ilmu sosial itu termasuk kedalam nomer 300 yang dimana disana dibagi lagi dan terdapat:<br>300 - Ilmu politik, Ekonomi, Hukum, Sosiologi, Pendidikan, Antropologi<br>Dengan Jumlah = 000</p>
+        </div>
+        <div id="bahasa" class="tab-pane">
+          <h2>Bahasa</h2>
+          <p>Dalam kategori DCC bahasa itu termasuk kedalam nomer 400 yang dimana disana dibagi lagi dan terdapat:<br>400 - Bahasa Inggris, Bahasa Indonesia, Bahasa Arab, Bahasa Prancis, Bahasa Spanyol<br>Dengan Jumlah = 000</p>
+        </div>
+        <div id="sains" class="tab-pane">
+          <h2>Sains</h2>
+          <p>Dalam kategori DCC sains itu termasuk kedalam nomer 500 yang dimana disana dibagi lagi dan terdapat:<br>500 - Matematika, Fisika, Kimia, Biologi, Ilmu Bumi<br>Dengan Jumlah = 000</p>
+        </div>
+        <div id="teknologi" class="tab-pane">
+          <h2>Teknologi</h2>
+          <p>Dalam kategori DCC teknologi itu termasuk kedalam nomer 600 yang dimana disana dibagi lagi dan terdapat:<br>600 - Kedokteran, Teknik, Pertanian, Teknologi rumah tangga, Manajemen<br>Dengan Jumlah = 000</p>
+        </div>
+        <div id="seni" class="tab-pane">
+          <h2>Seni & Rekreasi</h2>
+          <p>Dalam kategori DCC seni itu termasuk kedalam nomer 700 yang dimana disana dibagi lagi dan terdapat:<br>700 - Seni, Musik, Olahraga, Permainan, Teater<br>Dengan Jumlah = 000</p>
+        </div>
+        <div id="sastra" class="tab-pane">
+          <h2>Kesusastraan</h2>
+          <p>Dalam kategori DCC kesusastraan itu termasuk kedalam nomer 800 yang dimana disana dibagi lagi dan terdapat:<br>800 - Puisi, Drama, Fiksi, Non-fiksi<br>Dengan Jumlah = 000</p>
+        </div>
+        <div id="sejarah" class="tab-pane">
+          <h2>Sejarah & Geografi</h2>
+          <p>Dalam kategori DCC sejarah itu termasuk kedalam nomer 900 yang dimana disana dibagi lagi dan terdapat:<br>900 - Sejarah Dunia, Sejarah Indonesia, Sejarah Asia, Sejarah Eropa, Geografi<br>Dengan Jumlah = 000</p>
+        </div>
+      </div>
     </div>
-    
-    <div class="topnav1">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </div>
+  </div>
+
+<script>
+// script.js
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabPanes = document.querySelectorAll('.tab-pane');
+
+tabBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.target;
+    const targetPane = document.querySelector(target);
+
+    // Menghilangkan tab aktif sebelumnya
+    tabBtns.forEach((btn) => btn.classList.remove('active'));
+    tabPanes.forEach((pane) => pane.classList.remove('active'));
+
+    // Menampilkan tab dan konten yang dipilih
+    btn.classList.add('active');
+    targetPane.classList.add('active');
+  });
+});    
+</script>
+
 </section>
     
+   
+<!---------- navigation 2 ------------->
 <section>
-<div class="card">
-<div class="image"><span class="text"></span></div>
-  <span class="title">Karya</span>
-  <span class="price">$100</span>
-</div>
+<div class="genre-nav">
+  <a href="karyaumum.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fas fa-book"></i>
+    </div>
+    <h3>Karya Umum</h3>
+  </a>
+
+  <a href="filsafat.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fas fa-glasses"></i>
+    </div>
+    <h3>Filasafat & Sosiologi</h3>
+  </a>
+
+  <a href="agama.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fa-solid fa-person-praying"></i>
+    </div>
+    <h3>Agama</h3>
+  </a>
+
+  <a href="sosial.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fas fa-heart"></i>
+    </div>
+    <h3>Ilmu Sosial</h3>
+  </a>
+
+  <a href="bahasa.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fa-solid fa-language"></i>
+    </div>
+    <h3>Bahasa</h3>
+  </a>
     
-<div class="card">
-<div class="image"><span class="text">This is a chair.</span></div>
-  <span class="title">Cool Chair</span>
-  <span class="price">$100</span>
-</div>
+    <a href="murni.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fa-solid fa-vial"></i>
+    </div>
+    <h3>Sains</h3>
+  </a>
+    
+    <a href="teknologi.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fa-solid fa-microchip"></i>
+    </div>
+    <h3>Teknologi</h3>
+  </a>
+    
+    <a href="kesenian.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fa-solid fa-brush"></i>
+    </div>
+    <h3>Seni dan rekreasi</h3>
+  </a>
+    
+    <a href="kesustraan.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fa-solid fa-school-flag"></i>
+    </div>
+    <h3>Sastra</h3>
+  </a>
+    
+    <a href="sejarah.html" class="genre-card">
+    <div class="genre-icon">
+      <i class="fa-solid fa-monument"></i>
+    </div>
+    <h3>Sejarah & Geografi</h3>
+  </a>
+</div>    
 </section>
 
-<!----------- nav 2 ------------->
-<section>
-<div>
-    
+<div class="header">
+  <h2>Buku Khusus</h2>
 </div>
 
+<section>
+  <div class="Khusus">
+      <h3>Libary Club punya lho buku khusus yang ada di depan meja sirkulasi dan itu adalah buku khusus yang hanya boleh dibaca hanya di tempat perpustakaan saja. Buku tersebut tidak boleh dipinjam maupun dibawa pulang.</h3>
+  </div>
+  <div class="card">
+    <p><span>Rak Bagian 1</span></p>
+    <p><span>Rak Bagian 2</span></p>
+    <p><span>Rak Bagian 3</span></p>
+    <p><span>Rak Bagian 4</span></p>
+    <p><span>Rak Bagian 5</span></p>
+  </div>
+
 </section>
-      
+
+    
 <!----------- Footer ----------->
-<section class="footer">
-    <h4>About us</h4>
-    <p>OPERATION TIME</p>
-    <p>Senin-Jumat 08.00 - 16.00 WIB<br>Sabtu-Minggu 09.00 - 15.30 WIB<br>Cuti Bersama dan Libur Nasional Tutup</p>
-    <br>
-    <p>CONTACT<br>Natalie(+62 812-9474-5420)</p>
-    <br>
-    <div class="icons">
-        <i class="fa-brands fa-instagram"></i>
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>Jam Operasi</h3>
+      <p>Senin - Jumat: 08.00 — 16.00</p>
+      <p>Sabtu: 10.00 - 15.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
     </div>
-    <br>
-    <p>Copyright 2023 Made by personel of LC</p>
-</section>
+    <div class="footer-info">
+      <h3>Kontak</h3>
+      <p>Alamat: Jl. Raya Cirendeu No.5, Cireundeu, Kec. Ciputat Tim., Kota Tangerang Selatan, Banten 15419</p>
+      <p>Telepon: Not available for now</p>
+      <p>Email: libraryclubdelta@gmail.com</p>
+    </div>
+    <div class="footer-info">
+      <h3>Ikuti Kami</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/library.clubid?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 LibaryClub. All rights reserved.</p>
+  </div>
+</footer>
+    
+<!--------------------------------- load java ------------------------------------------->
+  <script>
+    const loadingTexts = [
+      "Fun fact: buku bukan cuma ada genre tapi ada DCC!",
+      "Sedang menyelam kedalam samudra buku",
+      "Memuat para buku-buku",
+      "Hayo lagi ngapain!",
+      "Apakah kamu tau, kamu ini pintar!"
+    ];
 
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loader = document.querySelector('.loader');
+        loader.style.display = 'none';
+      }, 3000);
+
+      const loadingText = document.querySelector('.loading-text');
+      const randomIndex = Math.floor(Math.random() * loadingTexts.length);
+      loadingText.textContent = loadingTexts[randomIndex];
+    });
+  </script>
 </body>
 </html>
