@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
 
@@ -155,6 +156,90 @@ nav {
   color: #1abc9c;
 }
 
+.nav-active{
+display: none;
+}
+
+.burger {
+display: none;
+cursor: pointer;
+}
+
+.burger div {
+width: 25px;
+height: 3px;
+background-color: #fff;
+margin: 5px;
+transition: all 0.3s ease;
+}
+
+/* -------------------------------- Responsive Design buger ------------------------------------- */
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2c3e50; /* Adjust background color */
+    position: fixed; /* Make it fixed for sticky behavior (optional) */
+    top: 0; /* Position at top (optional) */
+    left: 0; /* Position at left (optional) */
+    width: 100%; /* Make it full width */
+    z-index: 10; /* Ensure it stays on top of content (optional) */
+  }
+    
+  .nav-links {
+      display: none;
+  }
+
+  .burger {
+      display: block;
+  }
+
+  .nav-active {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: #2c3e50;
+      padding: 20px;
+  }
+
+  .nav-active li {
+      margin: 10px 0;
+  }
+
+  .toggle .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+      opacity: 0;
+  }
+
+  .toggle .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+  .nav-active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed; /* Ubah dari absolute menjadi fixed */
+    top: 80px; /* Sesuaikan dengan tinggi header */
+    left: 0;
+    right: 0; /* Tambahkan properti right: 0 */
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 20px;
+    z-index: 999; /* Tambahkan z-index agar navigasi di atas konten lain */
+  }
+}
+
 .info{
     height: 50vh;
     width: 100%;
@@ -174,7 +259,7 @@ nav {
     width: 140px;
 }
 
-/* For screens smaller than 768px (mobile devices) */
+/* ---------------------------------- Responsive Header design for phone -------------------------- */
 @media (max-width: 767px) {
     /* loading */
     .loading-indicator img {
@@ -198,14 +283,9 @@ nav {
         width: 60px;
     }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-/* Gaya umum */
-body {
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
 
+/*-----------------------------------------------------------------------------------------------------*/
+/* header awal setelah informasi */
 .header {
   text-align: center;
   align-items: center;
@@ -244,12 +324,15 @@ body {
   color: #b3e5fc;
 }
 
-/* Hero Section */
+/* ---------------------------------- Hero Section ---------------------------------------------- */
 .hero {
   background-image: url("Photo/back%20info.jpeg");
   background-size: cover;
   background-position: center;
-  height: 500px;
+  margin: 10px auto;
+  height: 50px;
+  border-radius: 10px;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -257,16 +340,6 @@ body {
   color: #fff;
   text-align: center;
   position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero h2 {
@@ -280,7 +353,7 @@ body {
   z-index: 1;
 }
 
-/* News Section */
+/* ---------------------------------------- News Section ---------------------------------------- */
 .news {
   padding: 2rem;
   max-width: 1200px;
@@ -363,20 +436,6 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    margin-top: 1rem;
-  }
-
-  nav ul li {
-    margin-left: 0;
-    margin-right: 1rem;
-  }
-
   .hero h2 {
     font-size: 2rem;
   }
@@ -389,7 +448,6 @@ body {
     font-size: 2rem;
   }
 }
-
 
 /*------------------------------------------ footer ------------------------------------*/
 /* Footer */
@@ -445,7 +503,7 @@ footer {
   margin: 0;
 }
 
-/* Responsive Styles */
+/* ----------------------------------- Responsive Styles for footer -------------------------------- */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -457,13 +515,3 @@ footer {
     margin-bottom: 30px;
   }
 }
-
-
-
-
-
-
-
-
-
-
