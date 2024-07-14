@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Perpustakaan</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel = "icon" href="Photo/LC%20(2).png" type="image/x-icon"> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://kit.fontawesome.com/1024277203.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!----------------------------------------- load -------------------------------------------------->
+<div class="loader">
+  <div class="wave-container">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <p class="loading-text"></p>
+</div>
+<!----------------------------------------- load -------------------------------------------------->
+
+<section class="body">
+    <div class="container">
+        <h1>Ayo! Gabung jadi anggota Kami!</h1>
+        <div class="benefits">
+            <h2>Keuntungan Menjadi Anggota</h2>
+            <ul>
+                <li>Akses tak terbatas ke koleksi buku dan sumber daya perpustakaan</li>
+                <li>Diskon untuk setiap acara khusus perpustakaan</li>
+                <li>Batas peminjaman yang tak terbatas</li>
+                <li>Layanan peminjaman & pengembalian buku yang diprioritaskan</li>
+            </ul>
+        </div>
+        <form action="send_email.php" method="post">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" required></textarea>
+
+			<button type="submit">Send Email</button>
+		</form>
+    </div>
+
+</section>
+
+<!----------- Footer ----------->
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>Jam Operasi</h3>
+      <p>Senin - Jumat: 08.00 — 16.00</p>
+      <p>Sabtu: 10.00 - 15.00</p>
+      <p>Minggu & Libur Nasional: Tutup</p>
+    </div>
+    <div class="footer-info">
+      <h3>Kontak</h3>
+      <p>Alamat: Jl. Raya Cirendeu No.5, Cireundeu, Kec. Ciputat Tim., Kota Tangerang Selatan, Banten 15419</p>
+      <p>Telepon: Not available for now</p>
+      <p>Email: libraryclubdelta@gmail.com</p>
+    </div>
+    <div class="footer-info">
+      <h3>Ikuti Kami</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/library.clubid?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 LibaryClub. All rights reserved.</p>
+  </div>
+</footer>
+
+<!--------------------------------- load java ------------------------------------------->
+<script>
+    const loadingTexts = [
+      "Memuat Berita sabar yah",
+      "Membaca buku dapat membuat mu pintar!",
+      "Mengumpulkan info terbaru nih",
+      "^-^ just wanted to say hi -developers",
+      "Halo! hari yang bagus bukan?"
+    ];
+
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loader = document.querySelector('.loader');
+        loader.style.display = 'none';
+      }, 3000);
+
+      const loadingText = document.querySelector('.loading-text');
+      const randomIndex = Math.floor(Math.random() * loadingTexts.length);
+      loadingText.textContent = loadingTexts[randomIndex];
+    });
+</script>
+
+</body>
+</html>
