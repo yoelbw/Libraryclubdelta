@@ -1,8 +1,9 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+	box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+	-webkit-tap-highlight-color: transparent;
 }
 
 /*-------------------------------------------------------------------------------------------------------*/
@@ -240,26 +241,27 @@ transition: all 0.3s ease;
   }
 }
 
+
 .info{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/4.png);
+    background: url(wave.svg);
     background-position: center;
     background-size: cover;
     text-align: center;
     color: #fff;
 }
 .info h1{
-    margin-top: 10%;
+    margin-top: 2%;
     text-align: center;
     font-size: 40px;
     font-weight: 700;
 }
 .info img{
-    width: 140px;
+    width: 150px;
 }
 
-/* ---------------------------------- Responsive Header design for phone -------------------------- */
+/* For screens smaller than 768px (mobile devices) */
 @media (max-width: 767px) {
     /* loading */
     .loading-indicator img {
@@ -272,28 +274,27 @@ transition: all 0.3s ease;
 
     /* LC */
     .info{
-        height: auto;
-        padding: 50px 0;
+        height: 35%;
+        padding: 60px 0;
     }
     .info h1 {
         font-size: 24px;
         margin-top: 0;
     }
     .info img {
-        width: 60px;
+        width: 70px;
     }
 }
-
 /*-----------------------------------------------------------------------------------------------------*/
-/* header awal setelah informasi */
+/* Gaya umum */
 .header {
   text-align: center;
   align-items: center;
   margin-top: 2%;
   margin-bottom: 2%;
-  margin-left: 20%;
-  margin-right: 20%;
-  border-radius: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 20px;
   background-color: #0077b6;
   padding: 1rem;
   color: #fff;
@@ -311,7 +312,7 @@ transition: all 0.3s ease;
 }
 
 .navigation ul li {
-  margin-left: 1rem;
+  margin: 1rem;
 }
 
 .navigation ul li a {
@@ -324,22 +325,20 @@ transition: all 0.3s ease;
   color: #b3e5fc;
 }
 
-/* ---------------------------------- Hero Section ---------------------------------------------- */
+/* Hero Section */
 .hero {
-  background-image: url("Photo/back%20info.jpeg");
-  background-size: cover;
-  background-position: center;
-  margin: 10px auto;
-  height: 50px;
-  border-radius: 10px;
-  padding: 100px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  position: relative;
+	background-image: url("Photo/back%20info.jpeg");
+	background-size: cover;
+	background-position: center;
+	height: 300px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	text-align: center;
+	position: relative;
 }
 
 .hero h2 {
@@ -353,7 +352,7 @@ transition: all 0.3s ease;
   z-index: 1;
 }
 
-/* ---------------------------------------- News Section ---------------------------------------- */
+/* News Section */
 .news {
   padding: 2rem;
   max-width: 1200px;
@@ -436,6 +435,11 @@ transition: all 0.3s ease;
 
 /* Responsive */
 @media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .hero h2 {
     font-size: 2rem;
   }
@@ -503,7 +507,7 @@ footer {
   margin: 0;
 }
 
-/* ----------------------------------- Responsive Styles for footer -------------------------------- */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -515,3 +519,13 @@ footer {
     margin-bottom: 30px;
   }
 }
+
+
+
+
+
+
+
+
+
+

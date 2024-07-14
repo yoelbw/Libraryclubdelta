@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+	-webkit-tap-highlight-color: transparent;
 }
 /*-------------------------------------------------------------------------------------------------------*/
 .loader {
@@ -246,7 +247,7 @@ transition: all 0.3s ease;
   margin-bottom: 2%;
   margin-left: 20%;
   margin-right: 20%;
-  border-radius: 100px;
+  border-radius: 20px;
   background-color: #0077b6;
   padding: 1rem;
   color: #fff;
@@ -254,20 +255,20 @@ transition: all 0.3s ease;
 .book{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Photo/3.png);
+    background: url(wave1.svg);
     background-position: center;
     background-size: cover;
     text-align: center;
     color: #fff;
 }
 .book h1{
-    margin-top: 10%;
+    margin-top: 2%;
     text-align: center;
     font-size: 40px;
     font-weight: 700;
 }
 .book img{
-    width: 140px;
+    width: 150px;
 }
 
 /* ---------------------------------- Responsive Header design for phone -------------------------- */
@@ -281,17 +282,17 @@ transition: all 0.3s ease;
       font-size: 16px;
   }
 
-  /* div. */
+  /* book. */
   .book{
-      height: auto;
-      padding: 50px 0;
+	  height: 35%;
+      padding: 60px 0;
   }
   .book h1 {
       font-size: 24px;
       margin-top: 0;
   }
   .book img {
-      width: 60px;
+      width: 70px;
   }
 }
 

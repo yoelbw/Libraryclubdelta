@@ -29,17 +29,42 @@
           <img src="Photo/logo%20sman%208.png" alt="Logo Sekolah" class="school-logo">
           <span class="collaboration-mark">X</span>
           <img src="Photo/LC%20(2).png" alt="Logo Perpustakaan" class="library-logo">
-          <h1>Delta's library</Del></h1>
+          <h1>Delta's library</h1>
       </div>
 
       <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Book.html">Katalog</a></li>
-          <li><a href="LC.html">About us</a></li>
-          <li><a href="Info.html">Berita</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Book.html">Katalog</a></li>
+        <li><a href="LC.html">About us</a></li>        
+        <li><a href="Info.html">Berita</a></li>                      
       </ul>
+
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+
   </nav>
-</header>    
+</header>
+<script>
+const navSlide = () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    burger.classList.toggle('toggle');
+  });
+
+  navLinks.forEach((link, index) => {
+    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+  });
+};
+
+navSlide();
+  </script>
 
 <section class="LC">
     <img src="Photo/LC%20(2).png">
@@ -231,32 +256,44 @@ function showSlides(n) {
 
   <main>
     <div class="org-chart">
+		<div class="header">
+			<h1>Kepala</h1>
+			<p>Orang yang mempunyai jabatan tinggi dan menjadi ketua dalam koordinasi sebuah organisasi</p>
+		</div>
       <div class="level">
         <div class="employee">
           <div class="image">
             <img src="Photo/yukka!.jpg" alt="Pembina">
           </div>
           <div class="name">Jejen Maelani S. Pd</div>
-          <div class="position">Pembina Ketua Library Club</div>
+          <div class="position">Kepala Ketua Library Club</div>
           <div class="details">
             <p>AKA : The Man</p>
             <p>Kelas : Alumni ini dia cok</p>
           </div>
         </div>
       </div>
+		<div class="header">
+			<h1>Pembina</h1>
+			<p>Orang yang akan memberi amanah dari kepala sekaligus mengajar</p>
+		</div>
       <div class="level">
         <div class="employee">
           <div class="image">
             <img src="Photo/yukka!.jpg" alt="Pelatih">
           </div>
           <div class="name">M. Yukha Mulyawan</div>
-          <div class="position">Pelatih Library Club</div>
+          <div class="position">Pembina Library Club</div>
           <div class="details">
             <p>AKA : The Man</p>
             <p>Kelas : Alumni ini dia cok</p>
           </div>
         </div>
       </div>
+	  <div class="header">
+			<h1>Ketua & Wakil</h1>
+			<p>Bertanggung jawab untuk membimbing para anggota nya dan menetapkan peraturan-peraturan yang tegas untuk sebuah perpustakaan</p>
+		</div>
       <div class="level">
         <div class="employee">
           <div class="image">
@@ -282,6 +319,10 @@ function showSlides(n) {
         </div>
       </div>
         <!-- SAMPE SINI GARIS PETINGGI DI ATAS INI GARIS PARA BOSS -->
+		<div class="header">
+			<h1>Administrasi</h1>
+			<p>Bagian yang bertanggung jawab untuk membantu kerja ketua & wakil sekaligus termasuk ke dalam tim Inti</p>
+		</div>
       <div class="level">
         <div class="employee">
           <div class="image">
@@ -329,7 +370,11 @@ function showSlides(n) {
         </div>
       </div>
       <!-- SAMPE SINI GARIS YANG PALING DEKET KE BOSS -->
-        <div class="level">
+        <div class="header">
+			<h1>Kepala Divisi</h1>
+			<p>Orang-orang yang bertanggung jawab membantu kerja dan pelayanan perpusatakaan</p>
+		</div>
+		<div class="level">
         <div class="employee">
           <div class="image">
             <img src="Photo/div.kreatif.jpeg" alt="Divisi 1">
