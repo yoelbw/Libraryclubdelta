@@ -580,6 +580,28 @@ transition: all 0.3s ease;
   transition: opacity 0.3s ease-in-out;
 }
 
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+.counter {
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    color: #01579b; /* Warna biru laut tua */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(45deg, #4fc3f7, #29b6f6); /* Gradien biru laut */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.counter:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
 /*---------------------------------------------------------- call to action -------------------------------------------------------*/
 .cta{
   margin: 100px auto;
