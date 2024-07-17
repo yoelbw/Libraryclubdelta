@@ -23,7 +23,7 @@
 </div>
 <!----------------------------------------- load -------------------------------------------------->
 <header>
-  <nav class="nav">
+  <nav>
       <div class="logo">
           <img src="Photo/logo%20sman%208.png" alt="Logo Sekolah" class="school-logo">
           <span class="collaboration-mark">X</span>
@@ -32,13 +32,39 @@
       </div>
 
       <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Book.html">Katalog</a></li>
-          <li><a href="LC.html">About us</a></li>
-          <li><a href="Info.html">Berita</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Book.html">Katalog</a></li>
+        <li><a href="LC.html">About us</a></li>        
+        <li><a href="Info.html">Berita</a></li>                      
       </ul>
+
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+
   </nav>
 </header>
+<script>
+const navSlide = () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    burger.classList.toggle('toggle');
+  });
+
+  navLinks.forEach((link, index) => {
+    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+  });
+};
+
+navSlide();
+  </script>
+  
 <section class="book" id="page6">
     <div class="bookback">
         <i class="fa-solid fa-vial"></i>
@@ -47,7 +73,7 @@
 </section>
     
 <section>
-<nav class="ocean-nav">
+<div class="ocean-nav">
   <ul>
     <li><a href="karyaumum.html" class="wave-link">Karya Umum</a></li>
     <li><a href="filsafat.html" class="wave-link">Filasafat & Sosiologi</a></li>
@@ -60,7 +86,7 @@
     <li><a href="kesustraan.html" class="wave-link">Kesusastraan</a></li>
     <li><a href="sejarah.html" class="wave-link">Sejarah</a></li>
   </ul>
-</nav>
+</div>
 </section>  
 
 <!----------- Collection ----------->
@@ -70,6 +96,11 @@
   <button id="searchBtn"><i class="fas fa-search"></i></button>
 </div>
 
+<div class= "header">
+	<h1>SEDANG DALAM TAHAP PENGERJAAN</h1>
+</div>
+
+<!---
 <div class="book-list">
     <div class="book-card">
         <img src="book1.jpg">
@@ -190,7 +221,7 @@ searchInput.addEventListener('input', function() {
 <script>
   const loadingTexts = [
     "Fun fact: buku bukan cuma ada genre tapi ada DCC!",
-    "Sedang menyelam kedalam samudra buku",
+    "Sedang menyelam ke dalam samudra buku",
     "Memuat para buku-buku",
     "Hayo lagi ngapain!",
     "Apakah kamu tau, kamu ini pintar!"

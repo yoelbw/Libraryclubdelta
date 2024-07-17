@@ -240,6 +240,18 @@ transition: all 0.3s ease;
   }
 }
 
+.header {
+  text-align: center;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 20px;
+  background-color: #0077b6;
+  padding: 1rem;
+  color: #fff;
+}
 
 .book{
     height: 50vh;
@@ -297,28 +309,34 @@ transition: all 0.3s ease;
 }
 
 /*------ nav nav -------*/
+/* Base styles for all devices */
 .ocean-nav {
   background-color: #0077b6;
-  padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 15px; /* Adjust padding for better fit on mobile */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Lighter shadow for mobile */
   margin-bottom: 1%;
 }
+
 .ocean-nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap; /* Wrap items on smaller screens */
   justify-content: center;
 }
+
 .ocean-nav li {
-  margin: 0px;
+  margin: 5px; /* Add some margin between links on mobile */
 }
+
+/* Link styles for all devices */
 .wave-link {
   position: relative;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 10px 15px; /* Adjust padding for better touch targets */
   border-radius: 20px;
   transition: all 0.3s ease;
 }
@@ -338,8 +356,20 @@ transition: all 0.3s ease;
 
 .wave-link:hover {
   background-color: #00b4d8;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Lighter shadow on hover */
 }
+
+/* Media query for mobile devices (optional) */
+@media only screen and (max-width: 768px) {
+  /* Additional styles for smaller screens */
+  .ocean-nav {
+    padding: 10px; /* Adjust padding further for very small screens */
+  }
+  .wave-link {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+}
+
 
 /*--------- new ---------*/
 .search-container {
@@ -411,19 +441,9 @@ transition: all 0.3s ease;
     .book h1 {
         font-size: 30px;
     }
-
-    .ocean-nav {
-        padding: 10px;
-    }
-
-    .wave-link {
-        padding: 8px 15px;
-    }
-
     #searchInput {
         width: calc(100% - 60px);
     }
-
     .book-card, .book-card1 {
         max-width: 100%;
     }
